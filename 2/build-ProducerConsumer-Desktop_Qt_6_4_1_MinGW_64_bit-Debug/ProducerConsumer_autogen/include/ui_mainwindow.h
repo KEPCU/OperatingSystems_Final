@@ -17,7 +17,6 @@
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTextBrowser>
-#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -26,12 +25,13 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralwidget;
-    QPushButton *pushButton;
-    QTextBrowser *textBrowser;
+    QPushButton *addProducer;
+    QTextBrowser *textProducer;
     QLabel *label;
-    QPushButton *pushButton_2;
-    QWidget *verticalLayoutWidget;
-    QVBoxLayout *verticalLayout;
+    QTextBrowser *textConsumer;
+    QPushButton *addConsumer;
+    QPushButton *stop;
+    QLabel *buffer;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -42,25 +42,37 @@ public:
         MainWindow->resize(600, 600);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
-        pushButton = new QPushButton(centralwidget);
-        pushButton->setObjectName("pushButton");
-        pushButton->setGeometry(QRect(110, 410, 80, 24));
-        textBrowser = new QTextBrowser(centralwidget);
-        textBrowser->setObjectName("textBrowser");
-        textBrowser->setGeometry(QRect(0, 100, 600, 192));
+        addProducer = new QPushButton(centralwidget);
+        addProducer->setObjectName("addProducer");
+        addProducer->setGeometry(QRect(90, 510, 100, 25));
+        textProducer = new QTextBrowser(centralwidget);
+        textProducer->setObjectName("textProducer");
+        textProducer->setGeometry(QRect(0, 80, 290, 400));
         label = new QLabel(centralwidget);
         label->setObjectName("label");
-        label->setGeometry(QRect(225, 10, 150, 16));
+        label->setGeometry(QRect(150, 5, 281, 20));
+        QFont font;
+        font.setPointSize(14);
+        font.setBold(true);
+        font.setUnderline(true);
+        label->setFont(font);
         label->setAlignment(Qt::AlignCenter);
-        pushButton_2 = new QPushButton(centralwidget);
-        pushButton_2->setObjectName("pushButton_2");
-        pushButton_2->setGeometry(QRect(450, 410, 80, 24));
-        verticalLayoutWidget = new QWidget(centralwidget);
-        verticalLayoutWidget->setObjectName("verticalLayoutWidget");
-        verticalLayoutWidget->setGeometry(QRect(0, 0, 361, 231));
-        verticalLayout = new QVBoxLayout(verticalLayoutWidget);
-        verticalLayout->setObjectName("verticalLayout");
-        verticalLayout->setContentsMargins(0, 0, 0, 0);
+        textConsumer = new QTextBrowser(centralwidget);
+        textConsumer->setObjectName("textConsumer");
+        textConsumer->setGeometry(QRect(310, 80, 290, 400));
+        addConsumer = new QPushButton(centralwidget);
+        addConsumer->setObjectName("addConsumer");
+        addConsumer->setGeometry(QRect(400, 510, 100, 25));
+        stop = new QPushButton(centralwidget);
+        stop->setObjectName("stop");
+        stop->setGeometry(QRect(270, 490, 50, 50));
+        buffer = new QLabel(centralwidget);
+        buffer->setObjectName("buffer");
+        buffer->setGeometry(QRect(10, 40, 580, 25));
+        QFont font1;
+        font1.setPointSize(10);
+        font1.setItalic(true);
+        buffer->setFont(font1);
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
@@ -78,17 +90,27 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
-        pushButton->setText(QCoreApplication::translate("MainWindow", "Add Producer", nullptr));
-        textBrowser->setHtml(QCoreApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        addProducer->setText(QCoreApplication::translate("MainWindow", "Add Producer", nullptr));
+        textProducer->setHtml(QCoreApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "hr { height: 1px; border-width: 0; }\n"
 "li.unchecked::marker { content: \"\\2610\"; }\n"
 "li.checked::marker { content: \"\\2612\"; }\n"
 "</style></head><body style=\" font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">fjfgjfgj</p></body></html>", nullptr));
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "Producer-Consumer", nullptr));
-        pushButton_2->setText(QCoreApplication::translate("MainWindow", "Add Producer", nullptr));
+        textConsumer->setHtml(QCoreApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"hr { height: 1px; border-width: 0; }\n"
+"li.unchecked::marker { content: \"\\2610\"; }\n"
+"li.checked::marker { content: \"\\2612\"; }\n"
+"</style></head><body style=\" font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", nullptr));
+        addConsumer->setText(QCoreApplication::translate("MainWindow", "Add Consumer", nullptr));
+        stop->setText(QCoreApplication::translate("MainWindow", "STOP", nullptr));
+        buffer->setText(QCoreApplication::translate("MainWindow", "Buffer: { } ", nullptr));
     } // retranslateUi
 
 };
