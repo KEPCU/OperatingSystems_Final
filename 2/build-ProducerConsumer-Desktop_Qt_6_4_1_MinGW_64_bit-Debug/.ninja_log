@@ -1,0 +1,21 @@
+# ninja log v5
+1	1137	6923334373527575	ProducerConsumer_autogen/timestamp	23b88f0e732702a2
+1	1137	6923334373527575	ProducerConsumer_autogen/mocs_compilation.cpp	23b88f0e732702a2
+1	1137	6923334373527575	E:/universidad/SEMESTRE_5/Operating Systems/final/2/build-ProducerConsumer-Desktop_Qt_6_4_1_MinGW_64_bit-Debug/ProducerConsumer_autogen/timestamp	23b88f0e732702a2
+1	1137	6923334373527575	E:/universidad/SEMESTRE_5/Operating Systems/final/2/build-ProducerConsumer-Desktop_Qt_6_4_1_MinGW_64_bit-Debug/ProducerConsumer_autogen/mocs_compilation.cpp	23b88f0e732702a2
+1137	2926	6923334393162361	CMakeFiles/ProducerConsumer.dir/ProducerConsumer_autogen/mocs_compilation.cpp.obj	e66cd41e3a72c067
+1140	2967	6923334393585612	CMakeFiles/ProducerConsumer.dir/main.cpp.obj	73ef9963bcb1e15e
+1139	3003	6923334393934678	CMakeFiles/ProducerConsumer.dir/mainwindow.cpp.obj	cf06cdefd637594c
+3003	3361	6923334397473376	ProducerConsumer.exe	f218f298e1a6099a
+5	518	6923337455745449	ProducerConsumer_autogen/timestamp	23b88f0e732702a2
+5	518	6923337455745449	ProducerConsumer_autogen/mocs_compilation.cpp	23b88f0e732702a2
+5	518	6923337455745449	E:/universidad/SEMESTRE_5/Operating Systems/final/2/build-ProducerConsumer-Desktop_Qt_6_4_1_MinGW_64_bit-Debug/ProducerConsumer_autogen/timestamp	23b88f0e732702a2
+5	518	6923337455745449	E:/universidad/SEMESTRE_5/Operating Systems/final/2/build-ProducerConsumer-Desktop_Qt_6_4_1_MinGW_64_bit-Debug/ProducerConsumer_autogen/mocs_compilation.cpp	23b88f0e732702a2
+533	2341	6923337473984000	CMakeFiles/ProducerConsumer.dir/mainwindow.cpp.obj	cf06cdefd637594c
+2342	2682	6923337477342230	ProducerConsumer.exe	f218f298e1a6099a
+5	534	6923346187220665	ProducerConsumer_autogen/timestamp	23b88f0e732702a2
+5	534	6923346187220665	ProducerConsumer_autogen/mocs_compilation.cpp	23b88f0e732702a2
+5	534	6923346187220665	E:/universidad/SEMESTRE_5/Operating Systems/final/2/build-ProducerConsumer-Desktop_Qt_6_4_1_MinGW_64_bit-Debug/ProducerConsumer_autogen/timestamp	23b88f0e732702a2
+5	534	6923346187220665	E:/universidad/SEMESTRE_5/Operating Systems/final/2/build-ProducerConsumer-Desktop_Qt_6_4_1_MinGW_64_bit-Debug/ProducerConsumer_autogen/mocs_compilation.cpp	23b88f0e732702a2
+549	2493	6923346206827265	CMakeFiles/ProducerConsumer.dir/mainwindow.cpp.obj	cf06cdefd637594c
+2494	2855	6923346210404057	ProducerConsumer.exe	f218f298e1a6099a
